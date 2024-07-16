@@ -29,7 +29,14 @@ form.addEventListener("submit", async (e) => {
 
   // Lo siguiente nos dice que si la respuesta por parte del BACK no es OK, se termina la ejecucion.
   if (!res.ok) {
-    console.log("!res");
+    Swal.fire({
+      //Agregamos una alerta con la LIBRERIA SweetAlert
+      title: `Error en el registro`,
+      icon: "error",
+      showConfirmButton: false, //Quitamos el boton de confirmacion.
+      timer: 3000, // Timer para que desaparezca automaticamente el alerta.
+      background: "#007091", //Cambiamos el color de fondo.
+    });
     return;
   } else if (res.ok) {
     Swal.fire({
