@@ -31,9 +31,18 @@ form.addEventListener("submit", async (e) => {
   if (!res.ok) {
     console.log("!res");
     return;
+  } else if (res.ok) {
+    Swal.fire({
+      //Agregamos una alerta con la LIBRERIA SweetAlert
+      title: `Registro Exitoso!`,
+      icon: "success",
+      showConfirmButton: false, //Quitamos el boton de confirmacion.
+      timer: 3000, // Timer para que desaparezca automaticamente el alerta.
+      background: "#007091", //Cambiamos el color de fondo.
+    });
   }
 
-  // // Lo siguiente nos dice que si hay una respuesta ok y a su vez, si existe un 'redirect' desde el front, lo renderizemos.
+  // Lo siguiente nos dice que si hay una respuesta ok y a su vez, si existe un 'redirect' desde el front, lo renderizemos.
   // const resJson = await res.json();
   // console.log(resJson);
   // if (resJson.redirect) {

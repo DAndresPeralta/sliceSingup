@@ -71,5 +71,3 @@ export const methods = {
   login,
   register,
 };
-
-// $2a$05$X/fRxNMDxqTzwXbOYA5qO.nZUydayCY0gNveDf43HrrxYWdxYe8im
