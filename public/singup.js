@@ -2,6 +2,7 @@
 
 // Traemos los datos del formulario
 const form = document.getElementById("singupForm");
+const closeSession = document.getElementById("btnC");
 // Generamos el evento que se acciona al apretar el boton de tipo submit
 form.addEventListener("submit", async (e) => {
   // Detiene la recarga automatica al apretar el boton
@@ -48,11 +49,8 @@ form.addEventListener("submit", async (e) => {
       background: "#007091", //Cambiamos el color de fondo.
     });
   }
+});
 
-  // Lo siguiente nos dice que si hay una respuesta ok y a su vez, si existe un 'redirect' desde el front, lo renderizemos.
-  // const resJson = await res.json();
-  // console.log(resJson);
-  // if (resJson.redirect) {
-  //   window.location.href = resJson.redirect; // Para hacer esto tengo que crear un endpoint
-  // }
+closeSession.addEventListener("click", (e) => {
+  document.location.href = "/";
 });

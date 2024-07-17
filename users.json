@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "name": "Andres Peralta",
+    "email": "danteandresperalta@gmail.com",
+    "password": "$2a$05$IRjkqnM7BFl11T6ZKyYcguJ74lvjhythPtGGtWrAxpu2rwY7m1o/a",
+    "admin": true
+  }
+]

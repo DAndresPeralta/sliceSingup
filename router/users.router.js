@@ -34,6 +34,7 @@ router.post("/register", async (req, res) => {
     name,
     email,
     password: hashPassword,
+    admin: true,
   };
 
   newUser.id = parseInt(users.length + 1);

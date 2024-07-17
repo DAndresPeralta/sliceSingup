@@ -144,12 +144,85 @@ a {
 }
 
 #firstWrap {
+    padding: 90px;
+    color: #ffab03;
+    font-family: 'Wix Madefor Display';
+}
+
+#firstWrap #title {
+    text-align: center;
+    margin: 0 0 50px;
+    font-size: 2.5rem;
+}
+
+#firstWrap .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#firstWrap .form-container .form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+    gap: 10px;
+    margin: auto;
+    height: 55vh;
+    width: 35vw;
+    background-color: #007091;
+    border-radius: 15px;
+    transition: all 0.3s ease 0s;
+}
+
+#firstWrap .form-container .form-box form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#firstWrap .form-container .form-box:hover {
+    transform: scale(1.015);
+}
+
+#firstWrap .form-container .form-box form button {
+    font-family: 'Wix Madefor Display';
+    font-weight: 600;
+    color: #007091;
+    margin-top: 10px;
+    padding: 7px 10px;
+    background-color: #ffab03;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#firstWrap .form-container .form-box form button:hover {
+    background-color: #007091;
+    color: #ffab03;
+    transform: scale(1.1);
+}
+
+#firstWrapI {
     padding: 200px;
     color: #ffab03;
     font-family: 'Wix Madefor Display';
 }
 
-#firstWrap div {
+#firstWrapI .form-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#firstWrapI .form-box {
+    width: 45%;
+}
+
+#firstWrapI div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,18 +237,18 @@ a {
     transition: all 0.3s ease 0s;
 }
 
-#firstWrap div form {
+#firstWrapI div form {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 10px;
 }
 
-#firstWrap div:hover {
+#firstWrapI div:hover {
     transform: scale(1.015);
 }
 
-#firstWrap div form button {
+#firstWrapI div form button {
     font-family: 'Wix Madefor Display';
     font-weight: 600;
     color: #007091;
@@ -188,8 +261,27 @@ a {
     transition: all 0.3s ease 0s;
 }
 
-#firstWrap div form button:hover {
+#firstWrapI div form button:hover {
     background-color: #007091;
+    color: #ffab03;
+    transform: scale(1.1);
+}
+
+#firstWrapI #btnC {
+    font-family: 'Wix Madefor Display';
+    font-weight: 600;
+    color: #007091;
+    margin-top: 10px;
+    padding: 7px 10px;
+    background-color: #ffab03;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#firstWrapI #btnC:hover {
+    background-color: #de0606;
     color: #ffab03;
     transform: scale(1.1);
 }
@@ -200,25 +292,31 @@ a {
     color: #ffab03;
 }
 
-
 @media (max-width: 768px) {
-    #firstWrap {
-        padding: 75px; /*Separa el contenedor de la navbar*/
+    #firstWrapI {
+        padding: 75px;
+        /*Separa el contenedor de la navbar*/
     }
 
-    #firstWrap div { 
+    #firstWrapI .form-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #firstWrapI .form-container .form-box {
         height: auto;
-        width: auto; /*el ancho y el alto del div se modifican automaticamente con un minimo de 20 px dado por el padding*/
+        width: auto;
+        /*el ancho y el alto del div se modifican automaticamente con un minimo de 20 px dado por el padding*/
         padding: 20px;
     }
 
-    #firstWrap div form button {
+    #firstWrapI .form-container .form-box form button {
         padding: 10px 15px;
     }
 }
 
 /*Configuracion del pie de página*/
-footer {
+#foot {
     /*Eliminamos el margen inferior y anclamos al fondo*/
     bottom: 0;
     background-color: #ffab03;
@@ -228,11 +326,11 @@ footer {
     position: absolute;
     width: 100%;
     height: 75px;
-    /* position: fixed; */
+    position: fixed;
     /* clear: both; */
 }
 
-footer h1 {
+#foot h1 {
     font-family: "Wix Madefor Display";
     font-weight: 100;
     font-size: 1.0rem;
