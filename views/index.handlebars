@@ -2,56 +2,74 @@
   <div class="logo">
     <!-- <img src="/public/images/Milessima.png" alt="logo"> -->
   </div>
-  <nav>
-    <input type="checkbox" id="check" />
-    <label for="check" class="checkbtn">
-      <i class="fa-solid fa-bars"></i>
-    </label>
-
-    <ul class="menu">
-      <li><a href="../routes/index.html">Inicio</a></li>
-      <li><a href="">Nosotros</a></li>
-      <li><a href="">Desarrollos</a></li>
-      <li><a href="">Contacto</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="singup.html">Registro</a></li>
-    </ul>
-  </nav>
+  <h1>Milessima Gestión de Depósitos</h1>
 </header>
 
+{{! <aside id="sidebar">
+  <ul class="menu">
+    <li><a href="../routes/index.html">Inicio</a></li>
+    <li><a href="">Nosotros</a></li>
+    <li><a href="">Desarrollos</a></li>
+    <li><a href="">Contacto</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="signup.html">Registro</a></li>
+  </ul>
+</aside> }}
+
 <main id="seccion-principal">
-  <section id="firstWrapI" class="conteiner">
-    <button id="btnC">Cerrar Sesión</button>
-    <div>
-      <h1 class="title">Registro</h1>
-      <form id="singupForm">
-        <label class="lbl" for="name">
-          <i class="fa-solid fa-user-tie"></i>
-          <input
-            type="text"
-            name="nombre"
-            id="nameS"
-            placeholder="Ingrese su nombre"
-          />
-        </label>
-        <label for="email">
-          <i class="fa-solid fa-at"></i>
-          <input
-            type="email"
-            name="email"
-            id="emailS"
-            placeholder="Ingrese su correo"
-          />
-        </label>
-        <label for="password"><i class="fa-solid fa-lock"></i><input
-            type="password"
-            name="password"
-            id="passwordS"
-            class="reset"
-            placeholder="Ingrese una contraseña"
-          /></label>
-        <button type="submit" id="btnS">Registrarme</button>
-      </form>
+  <section id="firstWrap" class="conteiner">
+    <h1 id="title">INGRESO</h1>
+    <div class="form-container">
+      <div class="form-box">
+        <h1 class="title">Administrador</h1>
+        {{! !FORMULARIO 1 }}
+        <form id="adminForm">
+          <label class="lbl" for="adminName">
+            <i class="fa-solid fa-user-tie"></i>
+            <input
+              type="email"
+              name="adminName"
+              id="adminName"
+              placeholder="Ingrese su correo electrónico"
+            />
+          </label>
+          <label for="adminPassword">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              type="password"
+              name="adminPassword"
+              id="adminPassword"
+              placeholder="Ingrese una contraseña"
+            />
+          </label>
+          <button type="submit" id="btnAdmin">Ingresar</button>
+        </form>
+      </div>
+      <div class="form-box">
+        <h1 class="title">Usuario</h1>
+        {{! !FORMULARIO 2 }}
+        <form id="userForm">
+          <label class="lbl" for="userName">
+            <i class="fa-solid fa-user-tie"></i>
+            <input
+              type="email"
+              name="userName"
+              id="userName"
+              placeholder="Ingrese su correo electrónico"
+            />
+          </label>
+          <label for="userPassword">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              type="password"
+              name="userPassword"
+              id="userPassword"
+              placeholder="Ingrese una contraseña"
+            />
+          </label>
+          <button type="submit" id="btnUser">Ingresar</button>
+        </form>
+      </div>
     </div>
   </section>
 </main>
@@ -60,5 +78,5 @@
   <h1>© 2024 Milessima</h1>
 </footer>
 
-<script src="singup.js"></script>
+<script src="login.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

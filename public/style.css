@@ -43,11 +43,19 @@ a {
     /*Alinea lo distintos elementos dentro del header (un <a> con un <ul> por ej.)*/
     align-items: center;
     justify-content: space-between;
-    height: 50px;
+    height: 70px;
     /*nuestro header ocupa todo el ancho de la página*/
     width: 100%;
     /*Nos fija el header al hacer scroll*/
     position: fixed;
+}
+
+#encabezado h1 {
+    font-family: "Wix Madefor Display";
+    font-weight: 500;
+    color: #efefef;
+    font-size: 1.5rem;
+    margin-right: 1%;
 }
 
 #encabezado .logo img {
@@ -143,10 +151,75 @@ a {
 
 }
 
+#sidebar {
+    width: 11%;
+    height: 100vh;
+    background: #007091;
+    color: #ffab03;
+    padding-top: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#sidebar .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar .menu li {
+    padding: 15px;
+}
+
+#sidebar .menu li a {
+    color: #ffab03;
+    text-decoration: none;
+    display: block;
+    font-family: "Wix Madefor Display";
+    font-weight: 500;
+    transition: all 0.3s ease 0s;
+}
+
+#sidebar .menu li a:hover {
+    color: #efefef;
+    font-weight: 700;
+}
+
+#sidebar #btnC {
+    font-family: 'Wix Madefor Display';
+    font-weight: 600;
+    color: #007091;
+    margin-left: auto;
+    margin-top: 90px;
+    padding: 7px 10px;
+    background-color: #ffab03;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#sidebar #btnC:hover {
+    background-color: #de0606;
+    color: #ffab03;
+    transform: scale(1.1);
+}
+
+main #seccion-principal {
+    margin-left: 220px;
+    /* Width of sidebar + some margin */
+    padding: 80px 20px 20px 20px;
+    flex: 1;
+}
+
 #firstWrap {
-    padding: 90px;
+
     color: #ffab03;
     font-family: 'Wix Madefor Display';
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px;
 }
 
 #firstWrap #title {
@@ -160,6 +233,8 @@ a {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: auto;
+    margin: auto
 }
 
 #firstWrap .form-container .form-box {
@@ -168,12 +243,14 @@ a {
     align-items: center;
     padding: 10%;
     gap: 10px;
-    margin: auto;
-    height: 55vh;
-    width: 35vw;
+    margin: 0 1% 0;
+    height: 35vh;
+    width: 25vw;
     background-color: #007091;
     border-radius: 15px;
     transition: all 0.3s ease 0s;
+    justify-content: center;
+    /* Add this line */
 }
 
 #firstWrap .form-container .form-box form {
@@ -267,25 +344,6 @@ a {
     transform: scale(1.1);
 }
 
-#firstWrapI #btnC {
-    font-family: 'Wix Madefor Display';
-    font-weight: 600;
-    color: #007091;
-    margin-top: 10px;
-    padding: 7px 10px;
-    background-color: #ffab03;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-#firstWrapI #btnC:hover {
-    background-color: #de0606;
-    color: #ffab03;
-    transform: scale(1.1);
-}
-
 /*CONFIGURACION DE ESTILOS DE SWEETALERT*/
 .swal2-title {
     font-family: 'Wix Madefor Display';
@@ -325,7 +383,7 @@ a {
     /*Eliminamos el margen inferior y anclamos al fondo*/
     position: absolute;
     width: 100%;
-    height: 75px;
+    height: 50px;
     position: fixed;
     /* clear: both; */
 }

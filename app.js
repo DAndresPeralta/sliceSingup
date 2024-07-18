@@ -33,10 +33,10 @@ app.use(express.urlencoded({ extended: true }));
 
 //? Esto es HANDLEBARS
 app.get("/index", (req, res) => {
-  res.render("index");
+  res.render("admin");
 });
 app.get("/", (req, res) => {
-  res.render("entry");
+  res.render("index");
 });
 
 // Al presionar "registrar" en la pagina, se envia mediante fetch un metodo post que se comunica, en el back, con "api/register", este a su vez se comunica con el router-
