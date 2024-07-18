@@ -6,9 +6,8 @@ adminForm.addEventListener("submit", async (e) => {
 
   const email = document.getElementById("adminName");
   const password = document.getElementById("adminPassword");
-  console.log(email.value);
 
-  const res = await fetch("http://localhost:4000/api/login", {
+  const res = await fetch("http://localhost:4000/api/loginAdmin", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -47,6 +46,40 @@ adminForm.addEventListener("submit", async (e) => {
   }
 });
 
-userForm.addEventListener("submit", (e) => {
+userForm.addEventListener("submit", async (e) => {
   e.preventDefault();
+
+  const email = document.getElementById("userName");
+  const password = document.getElementById("userPassword");
+
+  const res = await fetch("http://localhost:4000/api/loginUser", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: email.value,
+      password: password.value,
+    }),
+  });
+  if (!res.ok) {
+    Swal.fire({
+      //Agregamos una alerta con la LIBRERIA SweetAlert
+      title: `Credenciales incorrectas`,
+      icon: "error",
+      showConfirmButton: false, //Quitamos el boton de confirmacion.
+      timer: 3000, // Timer para que desaparezca automaticamente el alerta.
+      background: "#007091", //Cambiamos el color de fondo.
+    });
+    return;
+  } else if (res.ok) {
+    Swal.fire({
+      //Agregamos una alerta con la LIBRERIA SweetAlert
+      title: `Ingreso`,
+      icon: "success",
+      showConfirmButton: false, //Quitamos el boton de confirmacion.
+      timer: 3000, // Timer para que desaparezca automaticamente el alerta.
+      background: "#007091", //Cambiamos el color de fondo.
+    });
+  }
 });

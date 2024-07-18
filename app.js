@@ -2,7 +2,6 @@
 
 import express from "express";
 import handlebars from "express-handlebars";
-
 // Estas lineas lo que hacen es arreglar el error del enrutamiento necesario para utiliza __dirname
 import path from "path";
 import { fileURLToPath } from "url";
@@ -16,7 +15,7 @@ import routesLogin from "./router/login.router.js";
 const app = express();
 const PORT = 4000;
 
-// Settings.
+// ***** SETTINGS *****
 // Hago mi carpeta public estatica para poder acceder
 const publicPath = path.resolve(__dirname, "public");
 app.use(express.static(publicPath));
@@ -28,9 +27,10 @@ app.set("view engine", "handlebars");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Rutas. En "/coloco la ruta http"
+// ***** ROUTES *****
 //! Esto con HTML index
 // !app.get("/", (req, res) => res.sendFile(__dirname + "/pages/singup.html"));
+
 //? Esto es HANDLEBARS
 app.get("/index", (req, res) => {
   res.render("index");

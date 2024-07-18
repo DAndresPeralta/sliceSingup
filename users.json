@@ -5,5 +5,12 @@
     "email": "danteandresperalta@gmail.com",
     "password": "$2a$05$IRjkqnM7BFl11T6ZKyYcguJ74lvjhythPtGGtWrAxpu2rwY7m1o/a",
     "admin": true
+  },
+  {
+    "id": 2,
+    "name": "Martha Oropel",
+    "email": "oropelmartha@gmail.com",
+    "password": "$2a$05$XnL.Yce0L1ExaiGOG9lRsOGXtgRubRXydhIdwxMfjVXWKJFk6jVxK",
+    "admin": false
   }
 ]
